@@ -34,7 +34,7 @@ public class ToDoItemAdapter extends ArrayAdapter<ToDoItem> {
 		Float priority = item.getPriority();
 		Date createdDate = item.getCreated();
 		Date modifiedDate = item.getModified();
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yy");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM HH:mm");
 		String cdateString = sdf.format(createdDate);
 		String mdateString = sdf.format(modifiedDate);
 		
@@ -56,7 +56,7 @@ public class ToDoItemAdapter extends ArrayAdapter<ToDoItem> {
 		RatingBar ratingBar = (RatingBar) todoView.findViewById(R.id.priority);
 		
 		cdateView.setText(cdateString);
-		mdateView.setText(mdateString);
+		mdateView.setText("modified at : " +mdateString);
 		taskView.setText(taskString);
 		ratingBar.setRating(priority.floatValue());
 		

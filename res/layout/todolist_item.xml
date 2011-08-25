@@ -3,6 +3,14 @@
 	android:layout_width="fill_parent" android:layout_height="fill_parent"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical">
+	<RelativeLayout android:id="@+id/rl"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_margin="1.0dip">
+		<TextView android:id="@+id/cdate" android:layout_width="wrap_content"
+			android:padding="5dip" android:layout_height="wrap_content"
+			android:text="hehe" android:layout_alignParentRight="true">
+		</TextView>
+	</RelativeLayout>
 	<TextView android:id="@+id/task" android:layout_width="fill_parent"
 		android:padding="10px" android:layout_height="wrap_content"
 		android:text="hahaha">
@@ -11,12 +19,10 @@
 		android:layout_height="wrap_content" style="?android:attr/ratingBarStyleSmall"
 		android:numStars="5" android:stepSize="0.5">
 	</RatingBar>
-	<TextView android:id="@+id/cdate" android:layout_width="fill_parent"
-		android:padding="5dip" android:layout_height="wrap_content"
-		android:text="hehe">
-	</TextView>
 	<TextView android:id="@+id/mdate" android:layout_width="fill_parent"
 		android:padding="5dip" android:layout_height="fill_parent"
 		android:text="kk">
 	</TextView>
+	<android.widget.CalendarView android:id="@+id/widgetCalendarView1"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></android.widget.CalendarView>
 </LinearLayout>
